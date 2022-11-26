@@ -137,10 +137,12 @@ blockquote {
 // Navbar customization
 
 .navbar {
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0;
   box-shadow: none;
   border-bottom: 1px solid var(--global-divider-color);
-  background-color: var(--global-bg-color);
-  opacity: 0.95;
+  background-color: var(--global-chunlei-bg-color);
 }
 .navbar .dropdown-menu {
   background-color: var(--global-bg-color);
@@ -169,20 +171,27 @@ blockquote {
     }
   }
   .navbar-brand {
-    color: var(--global-text-color);
+    margin: 0;
+    padding: 16px 0;
+    color: var(--global-chunlei-text-color);
+
+    @media (max-width: 600px) {
+      margin-left: 16px;
+    }
   }
   .navbar-nav .nav-item .nav-link {
-    color: var(--global-text-color);
+    padding: 16px;
+    color: var(--global-chunlei-text-color);
     &:hover {
-      color: var(--global-hover-color);
+      color: var(--global-chunlei-hover-color);
     }
   }
   .navbar-nav .nav-item.active>.nav-link {
-      background-color: inherit;
+      background-color: var(--global-bg-color);
       font-weight: bolder;
-      color: var(--global-theme-color);
+      color: var(--global-chunlei-theme-color);
       &:hover {
-        color: var(--global-hover-color);
+        color: var(--global-chunlei-hover-color);
       }
   }
   .navbar-brand.social {
@@ -711,4 +720,29 @@ progress {
      width: 0%;
      display: block;
      height: inherit;
+ }
+
+ .home {
+   .personal-information {
+     font-size: 16px;
+     font-weight: 400;
+     color: var(--global-text-color);
+     display: flex;
+     align-items: center;
+     @media (max-width: 600px) {
+       flex-direction: column;
+     }
+
+     .avatar {
+       width: 248px;
+       margin-right: 48px;
+       object-fit: contain;
+       @media (max-width: 600px) {
+         margin: 0;
+       }
+     }
+   }
+   .content {
+     margin-top: 48px;
+   }
  }

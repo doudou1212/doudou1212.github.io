@@ -1,10 +1,10 @@
 ---
 layout: page
-permalink: /publications
-title: PUBLICATIONS
+permalink: /service
+title: SERVICE
 description: Description
 nav: true
-nav_order: 1
+nav_order: 4
 ---
 
 
